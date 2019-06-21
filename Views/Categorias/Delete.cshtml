@@ -1,0 +1,39 @@
+﻿@model WebApp.Models.Categoria
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h2>Delete</h2>
+
+<h3>Está seguro de eliminar este registro?</h3>
+<div>
+    <h4>Eliminar Categorias</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="CategoriaID" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" /> 
+        <a asp-action="Index"><i class="fas fa-step-backward"></i>Atrás</a>
+    </form>
+</div>
